@@ -1,0 +1,105 @@
+/* sima képernyős stílusok*/
+
+.adatok{
+    width: 50%;
+    margin: auto;
+    border-radius: 5px;
+}
+
+/*táblázat páros és páratlan sorainak különböző színe van*/
+tr:nth-child(even) {
+    background-color: #969696;
+    color: #313131;
+}
+tr:nth-child(odd) {
+    background-color: #eae9e9;
+}
+
+/*sorkizárt*/
+section p{
+    text-align: justify;
+    padding-left: 1em;
+}
+
+hr{
+    margin:2em;
+    border-color: #87dc38;
+}
+
+/*középre rendezett szöveg*/
+.figyelem{
+    text-align: center;
+}
+
+/*social media ikonok doboza középre rendezve, szélessége 30%, azon belül az ikonok között egyenletes tér*/
+.social-media{
+    font-size: 3rem;
+    width: 30%;
+    margin: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.social-media a{
+    cursor: pointer;
+}
+
+.social-media a:hover {
+    transform: scale(1.1);
+}
+
+
+/*közepes képernyő*/
+
+@media screen and (max-width: 1200px){
+    .social-media{
+        width: 60%;
+    }
+}
+
+/*kisképernyő*/
+
+@media screen and (max-width: 600px){
+    .social-media{
+        width: 80%;
+    }
+}
+
+/*sötét mód*/
+
+@media (prefers-color-scheme: dark){
+    .adatok{
+        border:0;
+    }
+    tr:nth-child(even) {
+        background-color: #969696;
+        color: #313131;
+    }
+    tr:nth-child(odd) {
+        background-color: #313131;
+    }
+    .social-media{
+        color: #87dc38;
+    }
+}
+
+/* nyomtatási stílusok*/
+
+@media print{
+    body{
+        color: black;
+    }
+
+    header,.side,.megosztas,footer{
+        display: none;
+    }
+
+    main{
+        padding: 2em;
+    }
+
+    hr {
+        border-color: black;
+    }
+}

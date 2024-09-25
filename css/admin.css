@@ -1,0 +1,104 @@
+/*címsor szélessége,
+  középre rendezés automatikus margókkal
+*/
+.content h2{
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/*admin login box stílusa*/
+.flex-container {
+    display: flex; /*flexbox layout*/
+    flex-wrap: wrap; /*kisképernyőn több sorba rendeződik*/
+    justify-content: space-around; /*térközök*/
+    width: 60%;
+    margin: auto; /*középre rendezés*/
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+/*a kép a div felét foglalja el*/
+.flex-container > img{
+    width: 50%;
+}
+
+/*bejelentkezési form stílusa*/
+/*oszlopba rendezi az elemeket*/
+.form-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*szöveges input box stílusa (fnév, jelszó)*/
+input[type=text],input[type=password] {
+    border: none;
+    border-bottom: 2px solid #87dc38;
+    background-color: #f1f1f1;
+}
+
+/*bejelentkezés gomb stílusa*/
+input[type=submit]{
+    background-color: #87dc38;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+ table {
+     border-collapse: collapse;
+     width: 100%;
+ }
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+}
+.delete-button {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin: 10px auto auto;
+}
+
+.delete-button:hover {
+    background-color: #d32f2f;
+}
+
+@media screen and (max-width: 600px){
+    .flex-container{
+        width: 100%;
+    }
+    .content h2 {
+        margin-right: 0;
+        margin-left: 0;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .flex-container{
+        color: #fafafa;
+        border: 1px solid #87dc38;
+        background-color: #4f4f4f;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    input[type=text],input[type=password]{
+        background-color: #4f4f4f;
+        border-bottom: 1px solid #87dc38;
+    }
+
+    input[type=submit]{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+}

@@ -1,0 +1,129 @@
+/* ---------------------------------------
+    kisképernyős stílusok, de ami nincs
+    felülírva a media query-ben, az a nagyképernyős
+    nézetre is vonatkozik
+------------------------------------------*/
+
+/*fejléc stílusa*/
+header {
+    align-items: center; /*függőleges elrendezés*/
+    display: flex; /*flexbox layout*/
+    justify-content: space-between; /*térköz az elemek között*/
+    padding: 1rem;
+    height: 5rem; /*fix magasság*/
+    position: fixed; /*fix helyzet legfelül*/
+    top: 0;
+    width: 100%; /*teljes szélesség*/
+    z-index: 999; /*mindig a navbar legyen legfelül, animációk közben is*/
+}
+
+header .fa{
+    font-size: 1.5rem;
+    padding-right: 0.5rem;
+}
+
+header h1 .io{
+    color: #87dc38;
+}
+
+.logo a:link, .logo a:visited{
+    text-decoration: none;
+}
+
+/*hamburger menü checkboxa, soha nem látszik */
+#menuToggle {
+    display: none;
+}
+
+nav {
+    height: 100vh; /*magasság: a képernyő magasságának 100%-a, nem veszi figyelembe a szülő elemet*/
+    left: 0; /*ne legyen bal oldalon rés*/
+    position: absolute; /*pozícionálás mindig a képernyőhöz, nem a többi elemhez viszonyítva*/
+    text-align: right; /*az X jobb oldalon legyen*/
+    top: -200vh; /*el van rejtve, amíg nincs bepipálva a checkbox*/
+    width: 100vw; /*teljes oldalszélesség, nem veszi figyelembe a szülő elemet*/
+}
+
+header,nav{
+    background-color: #fafafa;
+}
+
+/*hamburger ikon és X stílusa*/
+.menu-toggle {
+    margin-right: 1rem;
+    line-height: 2; /*sor magassága*/
+    cursor: pointer; /*kurzor típusa kezecske*/
+    font-size: 3rem; /*betűméret*/
+}
+
+nav ul {
+    list-style: none; /*ne legyenek felsorolásjelek*/
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+ul a{
+    text-decoration-color: rgba(253, 245, 230, 0); /*láthatatlan aláhúzás, hover-re változik*/
+    font-size: 1.5rem;
+}
+
+/*hover-re aláhúzás animáció*/
+ul a:hover{
+    text-decoration-color: #87dc38;
+    transition: text-decoration-color 700ms;
+}
+
+/*aktív link aláhúzása zöld színnel*/
+ul a.active{
+    text-decoration: underline;
+    text-decoration-color: #87dc38;
+}
+
+/*nav és label megjelenése, ha a hamburger ikonra kattintunk*/
+#menuToggle:checked + label + nav {
+    top: 0; /*a felső rejtett állapotból lejön, és látható lesz*/
+}
+
+/*-------------------------------------------------------
+    1000px-nél szélesebb képernyőkre vonatkozó szabályok
+---------------------------------------------------------*/
+@media (min-width: 1000px) {
+
+    /*ne látszódjanak a hamburger menü ikonjai*/
+    .menu-toggle {
+        display: none;
+    }
+
+    /*felülírja a korábban beállított hamburger menüt (20.sor)*/
+    nav {
+        /*background-color: transparent;
+        color: black;*/
+        height: auto;
+        left: auto;
+        position: relative;
+        top: auto;
+        width: auto;
+    }
+
+    /*vízszintes sorba rendezi a menü elemeit*/
+    nav ul {
+        display: flex;
+    }
+
+    /*bal margó a menü elemeinek*/
+    ul li {
+        margin-left: 1rem;
+    }
+}
+
+@media(prefers-color-scheme: dark){
+    header,nav{
+        background-color: #3d3d3d;
+    }
+
+    .logo a:link, .logo a:visited{
+        color: #fafafa;
+        text-decoration: none;
+    }
+}

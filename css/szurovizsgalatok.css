@@ -1,0 +1,86 @@
+
+/* kártyák flexbox-ba rendezve */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap; /*az elemek kerülhetnek a következő sorba is*/
+    justify-content: space-around; /*egyforma térközök, kis hely előttük és mögöttük is*/
+}
+
+/* 3 kártya fér egy sorba */
+.flex-container > div {
+    width: 30%;
+    margin: 10px;
+}
+
+/*animáció: alulról beúszás*/
+@keyframes alulrol {
+    from{
+        transform: translateY(50%);
+    }
+    to{
+        transform: translateY(0%);
+    }
+}
+
+/*animáció: jobbrol beúszás*/
+@keyframes jobbrol {
+    from{
+        transform: translateX(50%);
+    }
+    to{
+        transform: translateX(0%);
+    }
+}
+
+.content h1{
+    animation-name: jobbrol;
+    animation-duration: 1.5s;
+}
+
+/* lekerekített szegély és vetett árnyék*/
+.card {
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    animation-name: alulrol;
+    animation-duration: 1.5s;
+}
+
+/*eltolás hover-re*/
+.card:hover{
+    transform: translate(-10px, -10px);
+    transition: all 0.5s;
+}
+
+/*képek töltsék ki a kártyák szélességét, szegélyük lekerekítve*/
+.card > img {
+    width: 100%;
+    border-radius: 5px 5px 0 0;
+}
+
+.card-container {
+    padding: 2px 8px;
+}
+
+/*közepes képernyőn 2 kártya egy sorban*/
+@media screen and (max-width: 1200px) {
+    .flex-container > div {
+        width: 40%;
+        margin: 10px;
+    }
+}
+
+/*kisképernyőn 1 kártya egy sorban*/
+@media screen and (max-width: 600px) {
+    .flex-container > div {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .card{
+        border: 1px solid #87dc38;
+        box-shadow: none;
+        background-color: #4f4f4f;
+    }
+}

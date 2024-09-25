@@ -1,0 +1,40 @@
+[
+    {
+        "id": "662e49f21e01e",
+        "to": [
+            "adamrobert",
+            "user123"
+        ],
+        "from": "admin",
+        "text": "7kor rendszerleallas",
+        "date": "04\/28\/2024 01:06:58 pm"
+    },
+    {
+        "id": "662e97937af80",
+        "to": [
+            "admin"
+        ],
+        "from": "user123",
+        "text": "hozz\u00e1 kellene adni a tumormarkerek sz\u0171r\u00e9s\u00e9t",
+        "date": "04\/28\/2024 06:38:11 pm"
+    },
+    {
+        "id": "662eb9ea26202",
+        "to": [
+            "admin"
+        ],
+        "from": "adamrobert",
+        "text": "ez egy \u00fczenet",
+        "date": "04\/28\/2024 09:04:42 pm"
+    },
+    {
+        "id": "662ebe4ab8447",
+        "to": [
+            "adamrobert",
+            "janedoe"
+        ],
+        "from": "admin",
+        "text": "le\u00e1ll\u00e1s 8 \u00f3rakor pontban",
+        "date": "04\/28\/2024 09:23:22 pm"
+    }
+]

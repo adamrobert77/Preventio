@@ -1,0 +1,151 @@
+
+.flex-container{
+    display: flex; /* megjelenítési mód - flexbox */
+    flex-wrap: wrap; /* elemek sorba "terítése" */
+    justify-content: space-evenly; /* fennmaradó free space-t elosztja az elementek és a flex container között egyenlően */
+}
+
+/* egy div teljes szélessége, visszonyítva a flex-containterhez*/
+.flex-container > div {
+    width: 70%;
+}
+
+/* vertical align - alább részletezve - kártyán belül maximum szélesség százalékosan */
+.card > img {
+    vertical-align: top; /* ha ez nincs beállítva, misztikus margó keletkezik a képek alatt fehér háttérrel - elcsúszik az árnyék */
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2); /* <offset horizontal> - <offset vertical> - <elmodósás> - <szóródás> // rgba: szín és átlátszóság */
+    background-color: white;
+    min-width: 200px;
+    width: 100%
+}
+
+.card-container {
+    padding: 10px 20px 10px 20px; /* szélektől behúzni a tartalmaz "keretet" ad, amely befele épít */
+    text-align: justify; /* sorkizárt szöveg */
+}
+
+.card-container > h4 { /* h4-es tételek középre húzása szövegek felett */
+    text-align: center;
+}
+
+
+.break {
+    flex-basis: 100%; /* szándékos sorköz - 100%-nak kell lennie a szélességnek, akkor jó */
+    height: 60px; /* sorköz magassága */
+}
+
+
+li {
+    margin: 15px 0; /* (utolsó box/card) lista felsorolások közötti vertikális margó, kell mert enélkül nagyon összecsúszik */
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0; /* táblázat cella vonalak eltűntetése */
+    width: 100%;
+}
+
+thead {
+    background-color: #87dc38;
+    text-align: center;
+    border-radius: 10px;
+    color: white;
+}
+
+tbody {
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+}
+
+.paratlan {
+    background-color: #e1e1e1;
+    color: #3d3d3d;
+}
+
+/* ettől lesz slide-bar-os a táblázat az X tengelyen */
+.tabla-overflow {
+    overflow-x: auto;
+}
+
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 képarány - magasság/szélesség */
+    overflow: hidden;
+}
+
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.audio-container {
+    text-align: center;
+    position: relative;
+    width: 100%;
+    overflow: auto;
+}
+
+/* kis köz balról*/
+.card > h4{
+    padding-left: 1em;
+}
+
+
+@media screen and (max-width: 1200px) { /* 1200 px szélességtől 40% lesz egy div szélesség */
+    .flex-container > div {
+        width: 70%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) { /* 900 px szélességtől 70% lesz egy div szélesség */
+    .flex-container > div {
+        width: 70%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) { /* 600 px szélességtől 100% lesz egy div szélesség */
+    .flex-container > div {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+
+/* darkmode formázás */
+@media (prefers-color-scheme: dark){
+    .card{
+        box-shadow: none; /* 0 2px 8px 2px rgba(208, 246, 203, 0.5) */
+        background-color: #4f4f4f;
+    }
+
+
+    thead {
+        background-color: rgb(135, 220, 56);
+        text-align: center;
+        border-radius: 10px;
+        color: #3d3d3d;
+    }
+
+    tbody {
+        background-color: #4f4f4f;
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .paratlan {
+        background-color: #a1a1a1;
+        color: #3d3d3d;
+    }
+}

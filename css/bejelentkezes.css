@@ -1,0 +1,84 @@
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center; /* flexbox element vertikális elhelyezés */
+    justify-content: space-evenly; /* horizontális középre helyezés */
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    width: 70%;
+    margin: auto;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+}
+
+.flex-container > div { /* a tárolóba fele / fele arányba kerüljenek a tételek */
+    width: 50%;
+}
+
+.card > img {
+    vertical-align: top; /* ha ez nincs beállítva, misztikus margó keletkezik a képek alatt fehér háttérrel - elcsúszik az árnyék */
+    width: 100%;
+    border-radius: 5px 0 0 5px; /* sarok lekerekítés - csak ezeket kell, különben a belső sarkokat is lekerekíti */
+}
+
+.card {
+    background-color: #f1f1f1;
+    min-width: 200px;
+    justify-content: center;
+    text-align: center;
+    border-radius: 5px 0 0 5px; /* csak ezeket kell, különben darkmode-ban csúnya lesz */
+}
+
+/*szöveges input box stílusa (fnév, jelszó)*/
+input[type=text],input[type=password] {
+    border: none;
+    border-bottom: 2px solid #87dc38;
+    background-color: #eaeaea;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*bejelentkezés gomb stílusa*/
+input[type=submit]{
+    background-color: #87dc38;
+    border-radius: 5px;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) { /* 600 px szélességtől 100% lesz egy div szélesség */
+    .flex-container {
+        width: 200px; /* img min-width = 200px ---> így szépen vált horizontális és vertikális layout között - vertikálba már elég a 200px, nem kell nagyítgatni */
+    }
+
+    .card > img {
+        border-radius: 5px 5px 0 0; /* vertikális elrendezésben ezeket kell kerekíteni */
+    }
+
+    .card {
+        margin-bottom: 20px; /* kell margó, különben nagyon összecsúszik a kép / alsó border */
+        border-radius: 5px 5px 0 0; /* vertikális elrendezésben ezeket kell kerekíteni ---> media screen előtt másképp volt meghatározva */
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .card{
+        background-color: #4f4f4f;
+    }
+
+    .flex-container{
+        color: #fafafa;
+        background-color: #4f4f4f;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    input[type=text],input[type=password]{
+        background-color: #4f4f4f;
+        border-bottom: 1px solid #87dc38;
+    }
+
+    input[type=submit]{
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+}

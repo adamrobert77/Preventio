@@ -1,0 +1,92 @@
+/*a megadott szélességek a margókon kívül mindent magukba foglalnak (paddinget, bordert)*/
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: "Trebuchet MS",Helvetica, sans-serif;
+    color: #3d3d3d;
+    background-color: #fafafa;
+}
+
+a:link, a:visited{
+    color: #3d3d3d; /*alapértelmezés felülírása*/
+}
+
+main{
+    padding-top: 5rem; /*kihagyott hely a navbarnak*/
+    display: flex;
+}
+
+/* 3-oszlopos elrendezés: 15-70-15 arányokkal*/
+.column{
+    float: left;
+    padding: 10px;
+}
+
+.side{
+    width: 15%;
+}
+
+.content{
+    width: 70%;
+}
+
+/*az egész oldal tartalma benne van, így lehet a footert mindig alul tartani*/
+.page-container{
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 5rem; /*footernek hely kihagyva*/
+}
+
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    padding:1em;
+    background-color: #d0d0d0;
+    height: 5rem;
+}
+
+footer a{
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:link, footer a:visited{
+}
+
+footer p {
+    font-size: small;
+}
+
+/* kisképernyőn teljes szélességű oszlopok */
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    body{
+        background-color: #3d3d3d;
+        color: #e1e1e1;
+    }
+
+    ul a:link,
+    ul a:visited{
+        color: #e1e1e1; /*alapértelmezés felülírása*/
+    }
+
+    footer{
+        background-color: #4f4f4f;
+        color: #6c6c6c;
+    }
+
+    footer a:link, footer a:visited{
+        color: #969696;
+    }
+
+}

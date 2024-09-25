@@ -1,0 +1,167 @@
+@keyframes jobbrol {
+    from {
+        transform: translateX(50%); /* Kezdeti pozíció: alulról felfelé elrejtve */
+    }
+    to {
+        transform: translateX(0); /* Végállapot: teljesen felcsúszva */
+    }
+}
+
+@keyframes balrol {
+    from {
+        transform: translateX(-50%); /* Kezdeti pozíció: alulról felfelé elrejtve */
+    }
+    to {
+        transform: translateX(0); /* Végállapot: teljesen felcsúszva */
+    }
+}
+
+.content h1{
+    animation-name: balrol;
+    animation-duration: 1.5s;
+}
+
+.felhasznalo{
+    animation-name: jobbrol;
+    animation-duration: 1.5s;
+}
+
+.egeszsegugy{
+    animation-name: balrol;
+    animation-duration: 1.5s;
+}
+
+
+form *{
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+form>fieldset>legend{
+    font-size: 1.5rem;
+}
+
+fieldset{
+    border-radius: 5px;
+    border:0;
+    background-color: #e1e1e1;
+}
+
+.button-container, .response-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    animation-name: jobbrol;
+    animation-duration: 1.5s;
+}
+
+
+.felsorolas {       /*Kötelezően kitöldentő mezők - legyen felette, alatta hely*/
+    margin: 30px 0 40px 0;
+}
+.felteltelek-sorai {        /* Felsorolások között legyen kis sorköz*/
+    margin-bottom: 12px;
+}
+.felteltelek-sorai-kezdes { /* Színezzük be a betűket a jobb elkülöníthetőségért */
+    color: #87dc38;
+}
+
+
+.button {
+    background-color: #87dc38;
+    color: #3d3d3d;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    border: 0;
+    border-radius: 5px;
+    width: 14rem;
+    height: 2rem;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+    margin: 0;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+input[type=text],input[type=password]{
+    border:0;
+    border-bottom: 1px solid #87dc38;
+    background-color: #e1e1e1;
+}
+
+input[type=number]{
+    border: 1px solid #87dc38;
+    background-color: #e1e1e1;
+}
+
+input[type=reset]{
+    cursor: pointer;
+    border: 0;
+    border-radius: 5px;
+    width: 12rem;
+    height: 2rem;
+}
+
+input[type=reset]{
+    background-color: #3d3d3d;
+    color: white;
+}
+
+/*sötét mód színei*/
+
+@media (prefers-color-scheme: dark){
+    fieldset{
+        background-color: #4f4f4f;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        border:1px solid #87dc38;
+    }
+
+    input[type=number],input[type=text],input[type=password]{
+        background-color: #4f4f4f;
+    }
+
+    input[type=reset]{
+        cursor: pointer;
+        border: 0;
+        border-radius: 5px;
+        width: 12rem;
+        height: 2rem;
+    }
+
+    .button{
+        background-color: #87dc38;
+        color: #3d3d3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+    input[type=reset]{
+        background-color: #fafafa;
+        color: #3d3d3d;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    }
+
+
+}

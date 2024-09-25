@@ -1,0 +1,121 @@
+
+.flex-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; /* fennmaradó free space-t elosztja az elementek és a flex container között */
+    align-items: center; /* flexbox element vertikális elhelyezés */
+    box-shadow: 0 4px 10px 4px rgba(0, 0, 0, 0.2);
+    background: linear-gradient(170deg, rgba(135, 220, 56, 0.4) 10%, white 10%, white 80%, rgba(135, 220, 56, 0.4) 20%); /* sávos háttérszínezés adott %-tól adott %-ig értendő */
+    padding: 40px 40px 40px 40px; /* tartalom szélektől való elhúzása */
+    margin-bottom: 30px; /* kis elhúzás az oldal aljától */
+}
+
+.flex-container > div {
+    width: 35%;
+}
+
+.card > img {
+    vertical-align: top; /* ha ez nincs beállítva, misztikus margó keletkezik a képek alatt fehér háttérrel - elcsúszik az árnyék */
+    width: 100%;
+}
+
+.card {
+    box-shadow: 0 2px 8px 2px rgba(0, 0, 0, 0.2); /* <offset horizontal> - <offset vertical> - <elmodósás> - <szóródás> // rgba: szín és átlátszóság */
+    background-color: white;
+    min-width: 200px;
+}
+
+.card-container {
+    padding: 10px 20px 10px 20px; /* szélektől behúzni a tartalmaz */
+    text-align: justify; /* sorkizárt szöveg */
+}
+
+.card-container > h4 { /* h4-es tételek középre húzása szövegek felett */
+    text-align: center;
+}
+
+
+.break {
+    flex-basis: 100%; /* szándékos sorköz - 100%-nak kell lennie a szélességnek, akkor jó */
+    height: 60px; /* sorköz magassága */
+}
+
+.regisztracio {
+    padding: 2px 2px 2px 2px;
+    margin: 20px; /* szélektől behúzni a szöveget */
+}
+
+li {
+    margin: 15px 0; /* (utolsó box/card) lista felsorolások közötti vertikális margó, kell mert enélkül nagyon összecsúszik */
+}
+
+.button-container {
+    padding: 10px 20px 10px 20px; /* szélektől behúzni a tartalmaz */
+    text-align: center; /* sorkizárt szöveg */
+}
+
+.button-container a {
+    text-decoration: none; /* aláhúzás ne legyen */
+    text-align: center;
+    color: #87dc38; /* öröklés miatt itt színezzük be az <a> (button) elemet */
+}
+
+.button-registration {
+    background-color: transparent;
+    border: 2px solid #87dc38; /* 2px vastag, folytonos, adott színű keret */
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px auto;  /* ezzel tudjuk középre igazítani (auto) */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.button-registration a:link, .button-registration a:visited{
+    color: #87dc38;
+}
+
+.button-registration:hover {
+    background-color: transparent;
+    border: 2px solid #d7d7d7;
+    color: #D7D7D7FF;
+    padding: 5px 10px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 2px auto;   /* ezzel tudjuk középre igazítani (auto) */
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+
+
+@media screen and (max-width: 1200px) { /* 1200 px szélességtől 40% lesz egy div szélesség */
+    .flex-container > div {
+        width: 40%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 900px) { /* 900 px szélességtől 70% lesz egy div szélesség */
+    .flex-container > div {
+        width: 70%;
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) { /* 600 px szélességtől 100% lesz egy div szélesség */
+    .flex-container > div {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+@media (prefers-color-scheme: dark){
+    .card{
+        /*box-shadow: 0 2px 8px 2px rgba(208, 246, 203, 0.5);*/
+        background-color: #4f4f4f;
+    }
+    .flex-container {
+        background: linear-gradient(170deg, rgba(135, 220, 56, 0.4) 10%, #4f4f4f 10%, #4f4f4f 80%, rgba(135, 220, 56, 0.4) 20%); /* sávos háttérszínezés adott %-tól adott %-ig értendő */
+    }
+}

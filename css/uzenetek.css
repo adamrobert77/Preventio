@@ -1,0 +1,12 @@
+section{
+    border: 1px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+@media (prefers-color-scheme: dark){
+    section{
+        border: 1px solid white;
+    }
+}

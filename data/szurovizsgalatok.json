@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "title": "M\u00e9hnyakr\u00e1k sz\u0171r\u00e9s",
+        "image": "media\/images\/mehnyakrak.jpeg",
+        "description": "A m\u00e9hnyaksz\u0171r\u00e9s c\u00e9lja a m\u00e9hnyakr\u00e1k megel\u0151z\u00e9se, korai felismer\u00e9se, a t\u00fcneteket \u00e9s panaszokat m\u00e9g nem okoz\u00f3 m\u00e9hnyakr\u00e1k illetve r\u00e1kmegel\u0151z\u0151 \u00e1llapot felismer\u00e9se a k\u00e9s\u0151bbi, s\u00falyosabb k\u00f6vetkezm\u00e9nyek megel\u0151z\u00e9se \u00e9rdek\u00e9ben.",
+        "gender": [
+            "female"
+        ],
+        "age": [
+            "30",
+            "50",
+            "50+"
+        ],
+        "riskFactors": [
+            "ow"
+        ]
+    },
+    {
+        "id": "2",
+        "title": "PSA-sz\u0171r\u00e9s",
+        "image": "media\/images\/psa.jpg",
+        "description": "A teszt a prosztatar\u00e1k diagn\u00f3zis\u00e1nak fel\u00e1ll\u00edt\u00e1s\u00e1ban j\u00e1tszik fontos szerepet mind a t\u00fcnetmentes, mind a t\u00fcnetekkel rendelkez\u0151 f\u00e9rfiakn\u00e1l, valamint seg\u00edt eld\u00f6nteni a sz\u00f6vettani vizsg\u00e1lat (prosztata biopszia) sz\u00fcks\u00e9gess\u00e9g\u00e9t.",
+        "gender": [
+            "male"
+        ],
+        "age": [
+            "50+"
+        ],
+        "riskFactors": [
+            "ht"
+        ]
+    },
+    {
+        "id": "3",
+        "title": "Fog\u00e1szati sz\u0171r\u00e9s",
+        "image": "media\/images\/fogorvos.jpg",
+        "description": "A fog\u00e1szati sz\u0171r\u00e9s sor\u00e1n a fogorvos a teljes sz\u00e1j\u00fcreget megvizsg\u00e1lja, \u00edgy a fogak k\u00f3ros elv\u00e1ltoz\u00e1sain k\u00edv\u00fcl a sz\u00e1j\u00fcregi ny\u00e1lkah\u00e1rtya \u00e9s a nyelv megbeteged\u00e9sei is kor\u00e1n felismer\u00e9sre ker\u00fclhetnek, \u00e9s sz\u00fcks\u00e9g eset\u00e9n id\u0151ben megt\u00f6rt\u00e9nhet a sz\u00f6vettani diagnosztika.",
+        "gender": [
+            "female",
+            "male"
+        ],
+        "age": [
+            "30",
+            "50",
+            "50+"
+        ],
+        "riskFactors": [
+            "dm"
+        ]
+    },
+    {
+        "id": "4",
+        "title": "T\u00fcd\u0151sz\u0171r\u00e9s",
+        "image": "media\/images\/tudoszures.png",
+        "description": "A t\u00fcd\u0151sz\u0171r\u00e9s lehet\u0151s\u00e9get biztos\u00edt az ak\u00e1r hal\u00e1los kimenetel\u0171 t\u00fcd\u0151r\u00e1k korai diagnosztiz\u00e1l\u00e1s\u00e1ra, mert a daganat korai jelei a mellkasr\u00f6ntgen-felv\u00e9telen j\u00f3l felismerhet\u0151k.",
+        "gender": [
+            "female",
+            "male"
+        ],
+        "age": [
+            "50",
+            "50+"
+        ],
+        "riskFactors": [
+            "cc"
+        ]
+    },
+    {
+        "id": "5",
+        "title": "Mellr\u00e1ksz\u0171r\u00e9s",
+        "image": "media\/images\/mammografia.jpg",
+        "description": "A mellr\u00e1ksz\u0171r\u00e9s c\u00e9lja a mellr\u00e1k megel\u0151z\u00e9se, korai felismer\u00e9se, a t\u00fcneteket \u00e9s panaszokat m\u00e9g nem okoz\u00f3 mellr\u00e1k illetve r\u00e1kmegel\u0151z\u0151 \u00e1llapot felismer\u00e9se a k\u00e9s\u0151bbi, s\u00falyosabb k\u00f6vetkezm\u00e9nyek megel\u0151z\u00e9se \u00e9rdek\u00e9ben.",
+        "gender": [
+            "female"
+        ],
+        "age": [
+            "30",
+            "50",
+            "50+"
+        ],
+        "riskFactors": [
+            "aid"
+        ]
+    }
+]

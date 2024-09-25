@@ -1,0 +1,35 @@
+[
+    {
+        "username": "adamrobert",
+        "password": "$2y$10$QrNSriR9QXTjPlNywpcmX.TGd5d6lA7ghJyyh5X5opmrQwO7Y32Mm",
+        "age": 20,
+        "gender": "ferfi",
+        "weight": 20,
+        "height": 20,
+        "disorders": [
+            "ht"
+        ],
+        "role": 0
+    },
+    {
+        "username": "admin",
+        "password": "$2y$10$YCspLfQtuE.ojIWrxpfllOMw\/Mzyf9FYoNeKPsIeuDVnA9HPmdpL.",
+        "age": 23,
+        "gender": "no",
+        "weight": 65,
+        "height": 165,
+        "disorders": [],
+        "role": 1
+    },
+    {
+        "username": "janedoe",
+        "password": "$2y$10$8LcIUmtO1FbS9\/zHP612a.ujSGMqfJURi1Ei1MUiOUWV6F9.I\/st2",
+        "age": 44,
+        "gender": "no",
+        "weight": 44,
+        "height": 144,
+        "disorders": [],
+        "role": 0,
+        "image": "media\/images\/girl.jpg"
+    }
+]
